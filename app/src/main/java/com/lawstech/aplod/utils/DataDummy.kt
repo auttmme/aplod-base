@@ -14,7 +14,7 @@ object DataDummy {
                 "Adimas Fachri Ranunegoro",
                 "Cloud Computing",
                 "Universitas Telkom Bandung",
-                R.drawable.ok_hand
+                R.drawable.fachri
         ))
         members.add(
             MemberEntity(
@@ -22,14 +22,14 @@ object DataDummy {
                 "Agnesia Indryany Mangopo",
                 "Cloud Computing",
                 "Universitas Telkom Bandung",
-                R.drawable.ok_hand
+                R.drawable.agnes
         ))
         members.add(MemberEntity(
                 "A0121283",
                 "Alex Lianardo",
                 "Mobile Development",
                 "Universitas Telkom Bandung",
-                R.drawable.ok_hand
+                R.drawable.alex
         ))
         members.add(MemberEntity(
                 "A2242180",
@@ -43,14 +43,14 @@ object DataDummy {
                 "Muhammad Bondan Vitto Ramadhan",
                 "Machine Learning",
                 "Institut Teknologi Sepuluh Nopember Surabaya",
-                R.drawable.ok_hand
+                R.drawable.bondan
         ))
         members.add(MemberEntity(
                 "M0121267",
                 "Muhammad Ikhwan Khalid Nasution",
                 "Machine Learning",
                 "Universitas Telkom Bandung",
-                R.drawable.ok_hand
+                R.drawable.ikhwan
         ))
 
         return members

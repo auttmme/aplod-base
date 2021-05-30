@@ -6,41 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/grey_black"
     tools:context=".ui.home.HomeFragment">
-
-    <View
-        android:id="@+id/topView"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/purple_primary" />
     
     <View
         android:id="@+id/waveView"
-        android:layout_below="@+id/topView"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:background="@drawable/ic_purple_wave" />
-
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
-        android:text="@string/welcome"
-        android:layout_marginTop="24dp" />
-
-    <TextView
-        android:id="@+id/tv_always_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_below="@id/tv_welcome"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:textSize="14sp"
-        android:text="@string/always_check" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
