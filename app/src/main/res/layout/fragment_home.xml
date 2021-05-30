@@ -4,16 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_black"
     tools:context=".ui.home.HomeFragment">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/purple_primary" />
+    
+    <View
+        android:id="@+id/waveView"
+        android:layout_below="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_purple_wave" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="@string/welcome"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_always_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_below="@id/tv_welcome"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textSize="14sp"
+        android:text="@string/always_check" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
         android:hint="@string/label"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/waveView"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
+        app:endIconTint="@color/white"
         app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -25,6 +64,7 @@
             android:overScrollMode="always"
             android:scrollbars="vertical"
             android:scrollbarStyle="insideInset"
+            android:textColor="@color/white"
             android:fontFamily="@font/poppins_regular" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -35,13 +75,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textField"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="@color/light_blue_dark"
+        android:backgroundTint="@color/purple_primary"
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/white"
         android:text="@string/check"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp" />
-
 
     <ImageView
         android:id="@+id/img_ok"
@@ -105,40 +144,11 @@
         android:textColor="@color/light_blue_primary"
         android:gravity="center" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pasal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/langgar_pasal_detected"
-        android:layout_marginTop="12dp"
-        android:layout_marginHorizontal="20dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/pasal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pasal"
-                    android:textColor="@color/light_blue_dark"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    />
-                <TextView
-                    android:id="@+id/penjelasan_pasal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/penjelasan_pasal"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textColor="?android:attr/textColorSecondary"
-                    />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/langgar_pasal_detected"
+        tools:listitem="@layout/item_pasal" />
 </RelativeLayout>

@@ -4,10 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.about_us.AboutUsFragment">
+    android:background="@color/grey_black"
+    tools:context=".ui.member.MemberFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_member"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_member" />
 </androidx.constraintlayout.widget.ConstraintLayout>
