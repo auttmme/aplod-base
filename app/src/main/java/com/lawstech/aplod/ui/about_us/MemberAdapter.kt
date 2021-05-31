@@ -1,12 +1,12 @@
-package com.lawstech.aplod.ui.member
+package com.lawstech.aplod.ui.about_us
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.lawstech.aplod.data.source.local.entity.MemberEntity
 import com.lawstech.aplod.R
+import com.lawstech.aplod.data.source.local.entity.MemberEntity
 import com.lawstech.aplod.databinding.ItemMemberBinding
 
 class MemberAdapter : RecyclerView.Adapter<MemberAdapter.MemberViewHolder>(){

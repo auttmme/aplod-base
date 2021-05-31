@@ -1,9 +1,4 @@
-package com.lawstech.aplod.di
-
-import android.content.Context
-import com.lawstech.aplod.data.source.AplodRepository
-import com.lawstech.aplod.data.source.remote.RemoteDataSource
-import com.lawstech.aplod.utils.JsonHelper
+package com.lawstech.aplod.ui.di
 
 object Injection {
 //    fun provideRepository(context: Context): AplodRepository {

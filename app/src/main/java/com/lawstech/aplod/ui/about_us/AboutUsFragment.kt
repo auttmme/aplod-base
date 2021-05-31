@@ -1,17 +1,13 @@
-package com.lawstech.aplod.ui.member
+package com.lawstech.aplod.ui.about_us
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.lawstech.aplod.databinding.FragmentAboutUsBinding
-import com.lawstech.aplod.utils.DataDummy
-import com.lawstech.aplod.viewmodel.ViewModelFactory
 
-class MemberFragment : Fragment() {
+class AboutUsFragment : Fragment() {
 
     private lateinit var fragmentAboutUsBinding: FragmentAboutUsBinding
 
@@ -22,17 +18,8 @@ class MemberFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (activity != null) {
-            val members = DataDummy.generateDummyMembers()
-
-            val memberAdapter = MemberAdapter()
-            memberAdapter.setMember(members)
-
-            with(fragmentAboutUsBinding.rvMember) {
-                layoutManager = LinearLayoutManager(context)
-                setHasFixedSize(true)
-                adapter = memberAdapter
-            }
-        }
+        val aboutUsPageAdapter = context?.let { AboutUsPageAdapter(it, this.childFragmentManager) }
+        fragmentAboutUsBinding.viewPager.adapter = aboutUsPageAdapter
+        fragmentAboutUsBinding.tabs.setupWithViewPager(fragmentAboutUsBinding.viewPager)
     }
 }

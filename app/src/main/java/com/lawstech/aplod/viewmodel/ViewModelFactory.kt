@@ -1,13 +1,7 @@
 package com.lawstech.aplod.viewmodel
 
-import android.content.Context
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.lawstech.aplod.data.source.AplodRepository
-import com.lawstech.aplod.di.Injection
-import com.lawstech.aplod.ui.faq.FaqViewModel
-import com.lawstech.aplod.ui.home.HomeViewModel
-import com.lawstech.aplod.ui.member.MemberViewModel
 
 class ViewModelFactory private constructor(private val mAplodRepository: AplodRepository) : ViewModelProvider.NewInstanceFactory() {
 

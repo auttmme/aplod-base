@@ -20,4 +20,7 @@
     <string name="always_check">Always check your comment first!</string>
     <string name="path">Mobile Development</string>
     <string name="universitas">Universitas</string>
+    <string name="aplod">Aplod</string>
+    <string name="member">Member</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
